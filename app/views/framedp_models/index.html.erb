@@ -1,0 +1,29 @@
+<h1>Listing framedp_models</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Gff</th>
+    <th>Nuc</th>
+    <th>Pep</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @framedp_models.each do |framedp_model| %>
+  <tr>
+    <td><%= framedp_model.name %></td>
+    <td><%= framedp_model.gff %></td>
+    <td><%= framedp_model.nuc %></td>
+    <td><%= framedp_model.pep %></td>
+    <td><%= link_to 'Show', framedp_model %></td>
+    <td><%= link_to 'Edit', edit_framedp_model_path(framedp_model) %></td>
+    <td><%= link_to 'Destroy', framedp_model, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Framedp model', new_framedp_model_path %>

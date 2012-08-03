@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @framedp_model.name %>
+</p>
+
+<p>
+  <b>Gff:</b>
+  <%= @framedp_model.gff %>
+</p>
+
+<p>
+  <b>Nuc:</b>
+  <%= @framedp_model.nuc %>
+</p>
+
+<p>
+  <b>Pep:</b>
+  <%= @framedp_model.pep %>
+</p>
+
+
+<%= link_to 'Edit', edit_framedp_model_path(@framedp_model) %> |
+<%= link_to 'Back', framedp_models_path %>

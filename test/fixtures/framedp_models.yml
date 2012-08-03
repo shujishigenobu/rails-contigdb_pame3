@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  gff: MyText
+  nuc: MyText
+  pep: MyText
+
+two:
+  name: MyString
+  gff: MyText
+  nuc: MyText
+  pep: MyText

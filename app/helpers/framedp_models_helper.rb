@@ -1,0 +1,2 @@
+module FramedpModelsHelper
+end
