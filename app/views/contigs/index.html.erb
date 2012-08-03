@@ -1,0 +1,32 @@
+<h1>Contigs</h1>
+
+<div class="search_form">
+	<%= form_tag '/contigs', :method => :get do %>
+	<i class="icon-search"></i>
+		<div>
+			<%= text_field_tag :q, params[:q] %>
+			<%= submit_tag("Search", :class => "btn") %>
+		</div>
+
+	<% end %>
+</div>
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Length</th>
+    <th></th>
+  </tr>
+
+<% @contigs.each do |contig| %>
+  <tr>
+    <td><%= contig.name %></td>
+    <td><%= contig.seq.length %></td>
+    <td><%= link_to 'Show', contig %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<p><%= will_paginate @orders %></p>

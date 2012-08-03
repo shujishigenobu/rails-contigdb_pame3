@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+
+<h1><%= @contig.name %></h1>
+
+<pre><%= @contig.fasta_entry.record %></pre>
+
+<p><%= link_to("BLASTX:arth14:fmt0", 
+	:controller => "blast_results", 
+	:action => "plain",
+	:model => "BlastxContigArth14F0Result",
+	:rid => @contig.blastx_contig_arth14_f0_result) %></p>
+
+<p>ORF prediction: <%= @contig.framedp_summaries.size %></p>
+<ul>
+	<% @contig.framedp_summaries.each do |fdp| %>
+    <li><%= fdp.orf_name %> (<%= fdp.aalen %> aa)</li>
+	<% end %>
+</ul>
+
+
+<!--
+<pre><%= @contig.blastx_contig_arth14_f0_result.record %></pre>
+-->
+<%= link_to 'Back', contigs_path %>
