@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  contig_name: MyString
+  orf_name: MyString
+  from: 1
+  to: 1
+  strand: MyString
+  type: 
+  aaseq: MyText
+  contig_id: 1
+
+two:
+  contig_name: MyString
+  orf_name: MyString
+  from: 1
+  to: 1
+  strand: MyString
+  type: 
+  aaseq: MyText
+  contig_id: 1
