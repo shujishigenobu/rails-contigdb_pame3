@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Contig name:</b>
+  <%= @framedp_summary.contig_name %>
+</p>
+
+<p>
+  <b>Orf name:</b>
+  <%= @framedp_summary.orf_name %>
+</p>
+
+<p>
+  <b>Start pos:</b>
+  <%= @framedp_summary.start_pos %>
+</p>
+
+<p>
+  <b>End pos:</b>
+  <%= @framedp_summary.end_pos %>
+</p>
+
+<p>
+  <b>Strand:</b>
+  <%= @framedp_summary.strand %>
+</p>
+
+<p>
+  <b>Pred type:</b>
+  <%= @framedp_summary.pred_type %>
+</p>
+
+<p>
+  <b>Aaseq:</b>
+  <%= @framedp_summary.aaseq %>
+</p>
+
+<p>
+  <b>Aalen:</b>
+  <%= @framedp_summary.aalen %>
+</p>
+
+<p>
+  <b>Contig:</b>
+  <%= @framedp_summary.contig_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_framedp_summary_path(@framedp_summary) %> |
+<%= link_to 'Back', framedp_summaries_path %>

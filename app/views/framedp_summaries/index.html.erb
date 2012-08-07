@@ -1,0 +1,39 @@
+<h1>Listing framedp_summaries</h1>
+
+<table>
+  <tr>
+    <th>Contig name</th>
+    <th>Orf name</th>
+    <th>Start pos</th>
+    <th>End pos</th>
+    <th>Strand</th>
+    <th>Pred type</th>
+    <th>Aaseq</th>
+    <th>Aalen</th>
+    <th>Contig</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @framedp_summaries.each do |framedp_summary| %>
+  <tr>
+    <td><%= framedp_summary.contig_name %></td>
+    <td><%= framedp_summary.orf_name %></td>
+    <td><%= framedp_summary.start_pos %></td>
+    <td><%= framedp_summary.end_pos %></td>
+    <td><%= framedp_summary.strand %></td>
+    <td><%= framedp_summary.pred_type %></td>
+    <td><%= framedp_summary.aaseq %></td>
+    <td><%= framedp_summary.aalen %></td>
+    <td><%= framedp_summary.contig_id %></td>
+    <td><%= link_to 'Show', framedp_summary %></td>
+    <td><%= link_to 'Edit', edit_framedp_summary_path(framedp_summary) %></td>
+    <td><%= link_to 'Destroy', framedp_summary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Framedp summary', new_framedp_summary_path %>

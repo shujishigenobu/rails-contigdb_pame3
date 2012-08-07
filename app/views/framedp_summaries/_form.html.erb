@@ -1,0 +1,53 @@
+<%= form_for(@framedp_summary) do |f| %>
+  <% if @framedp_summary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@framedp_summary.errors.count, "error") %> prohibited this framedp_summary from being saved:</h2>
+
+      <ul>
+      <% @framedp_summary.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :contig_name %><br />
+    <%= f.text_field :contig_name %>
+  </div>
+  <div class="field">
+    <%= f.label :orf_name %><br />
+    <%= f.text_field :orf_name %>
+  </div>
+  <div class="field">
+    <%= f.label :start_pos %><br />
+    <%= f.number_field :start_pos %>
+  </div>
+  <div class="field">
+    <%= f.label :end_pos %><br />
+    <%= f.number_field :end_pos %>
+  </div>
+  <div class="field">
+    <%= f.label :strand %><br />
+    <%= f.text_field :strand %>
+  </div>
+  <div class="field">
+    <%= f.label :pred_type %><br />
+    <%= f.text_field :pred_type %>
+  </div>
+  <div class="field">
+    <%= f.label :aaseq %><br />
+    <%= f.text_area :aaseq %>
+  </div>
+  <div class="field">
+    <%= f.label :aalen %><br />
+    <%= f.number_field :aalen %>
+  </div>
+  <div class="field">
+    <%= f.label :contig_id %><br />
+    <%= f.number_field :contig_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
