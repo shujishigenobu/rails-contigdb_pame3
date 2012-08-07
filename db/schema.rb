@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120803125034) do
+ActiveRecord::Schema.define(:version => 20120807015157) do
 
   create_table "blastx_contig_arth14_f0_results", :force => true do |t|
     t.string   "query"
@@ -41,17 +41,6 @@ ActiveRecord::Schema.define(:version => 20120803125034) do
   end
 
   add_index "fasta_entries", ["name"], :name => "index_fasta_entries_on_name", :unique => true
-
-  create_table "framedp_models", :force => true do |t|
-    t.string   "name"
-    t.text     "gff"
-    t.text     "nuc"
-    t.text     "pep"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "framedp_models", ["name"], :name => "index_framedp_models_on_name"
 
   create_table "framedp_summaries", :force => true do |t|
     t.string   "contig_name"

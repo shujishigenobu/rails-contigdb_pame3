@@ -1,4 +1,6 @@
 ContigdbPame2::Application.routes.draw do
+  resources :framedp_summaries
+
   resources :framedp_models
 
   get "blast_results/plain"

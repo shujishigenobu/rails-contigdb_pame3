@@ -14,7 +14,8 @@
 <p>ORF prediction: <%= @contig.framedp_summaries.size %></p>
 <ul>
 	<% @contig.framedp_summaries.each do |fdp| %>
-    <li><%= fdp.orf_name %> (<%= fdp.aalen %> aa)</li>
+    <li><%= fdp.orf_name %> (<%= fdp.aalen %> aa) 
+    	[<%= link_to("link", fdp) %>]</li>
 	<% end %>
 </ul>
 
