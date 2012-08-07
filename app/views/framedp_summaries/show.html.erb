@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Contig name:</b>
-  <%= @framedp_summary.contig_name %>
+  <b>Orf name:</b>
+  <%= @framedp_summary.orf_name %>
 </p>
 
 <p>
-  <b>Orf name:</b>
-  <%= @framedp_summary.orf_name %>
+  <b>Contig name:</b>
+  <%= @framedp_summary.contig_name %>
 </p>
 
 <p>
@@ -45,6 +45,8 @@
   <%= @framedp_summary.contig_id %>
 </p>
 
+<h2>ORF (nuc)</h2>
+<pre><%= @framedp_summary.fasta_orf_framedp_nuc_entry.record %></pre>
 
-<%= link_to 'Edit', edit_framedp_summary_path(@framedp_summary) %> |
-<%= link_to 'Back', framedp_summaries_path %>
+<h2>ORF (pep)</h2>
+<pre><%= @framedp_summary.fasta_orf_framedp_pep_entry.record %></pre>

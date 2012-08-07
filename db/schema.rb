@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120807015157) do
+ActiveRecord::Schema.define(:version => 20120807085648) do
 
   create_table "blastx_contig_arth14_f0_results", :force => true do |t|
     t.string   "query"
@@ -41,6 +41,28 @@ ActiveRecord::Schema.define(:version => 20120807015157) do
   end
 
   add_index "fasta_entries", ["name"], :name => "index_fasta_entries_on_name", :unique => true
+
+  create_table "fasta_orf_framedp_nuc_entries", :force => true do |t|
+    t.string   "name"
+    t.text     "record"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "framedp_summary_id"
+  end
+
+  add_index "fasta_orf_framedp_nuc_entries", ["framedp_summary_id"], :name => "index_fasta_orf_framedp_nuc_entries_on_framedp_summary_id", :unique => true
+  add_index "fasta_orf_framedp_nuc_entries", ["name"], :name => "index_fasta_orf_framedp_nuc_entries_on_name"
+
+  create_table "fasta_orf_framedp_pep_entries", :force => true do |t|
+    t.string   "name"
+    t.text     "record"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.integer  "framedp_summary_id"
+  end
+
+  add_index "fasta_orf_framedp_pep_entries", ["framedp_summary_id"], :name => "index_fasta_orf_framedp_pep_entries_on_framedp_summary_id", :unique => true
+  add_index "fasta_orf_framedp_pep_entries", ["name"], :name => "index_fasta_orf_framedp_pep_entries_on_name"
 
   create_table "framedp_summaries", :force => true do |t|
     t.string   "contig_name"
